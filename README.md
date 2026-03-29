@@ -1,10 +1,3 @@
 # Real-VS-Ai-Image-Detector
 Deep learning model that detects Real vs AI Generated images using EfficientNet
-Name : Ashish Bipinbhai Makwana 
-Project Definition : Predicting Real and Ai Generated Images  
-Model : EfficientNetB3 (Fine-Tuned on ImageNet) 
-Dataset : MS COCOAI — Defactify Image Dataset (HuggingFace) 
-Task : Binary Classification — Real Image vs AI Generated Image 
-Test Accuracy : 83.57%  |  F1 Score: 0.84 
-Platform : Google Colab (T4 GPU) 
-Date : March 2026
+This project was developed by Ashish Bipinbhai Makwana in March 2026 as a deep learning solution for distinguishing real photographs from AI-generated images. The model is based on EfficientNetB3, fine-tuned on ImageNet weights, and trained on the MS COCO AI — Defactify Image Dataset sourced from HuggingFace. It performs binary classification — predicting whether a given image is real or AI-generated — achieving a test accuracy of 83.57% and an F1 Score of 0.84. The entire training pipeline was built and executed on Google Colab using a T4 GPU.
