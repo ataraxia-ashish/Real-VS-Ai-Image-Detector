@@ -8,9 +8,10 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-orange?style=flat&logo=googlecolab)
 
-> Can your eyes tell the difference between a real photo and an AI-generated one?  
-> **Mine couldn't. So I built a model that can.**
-
+> With the rapid advancement of AI image generation technology, 
+> distinguishing real photographs from AI-generated images has become 
+> increasingly challenging — even for trained professionals.
+> This project presents a deep learning solution to automate that detection.
 ---
 
 ## 📽️ Demo Video
@@ -22,7 +23,7 @@
 
 Two cats. Same breed. Completely different origins. The model got both right.
 
-### Test 1 — AI Generated Image (Nano Banana 2)
+### Test 1 — AI Generated Image (Nano Banana Pro)
 | Input | Prediction |
 |---|---|
 | ![AI Cat](outputs/ai_cat_input.jpeg) | ![AI Cat Output](outputs/ai_cat_output.png) |
