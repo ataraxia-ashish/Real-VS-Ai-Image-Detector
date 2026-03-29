@@ -227,7 +227,8 @@ This project was developed as the **Final Project** for the
 **[Artificial Intelligence Certificate Course]** AI & Data Science Certificate Program.
 
 Special thanks to [@veershah-sh](https://github.com/veershah-sh) 
-and the entire teaching team for the guidance throughout this journey.---
+and the entire teaching team for the guidance throughout this journey.
+---
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
