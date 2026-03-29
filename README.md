@@ -27,7 +27,7 @@ Two cats. Same breed. Completely different origins. The model got both right.
 |---|---|
 | ![AI Cat](outputs/ai_cat_input.jpg) | ![AI Cat Output](outputs/ai_cat_output.png) |
 
-**Verdict: FAKE (AI Generated) — 97.16% confidence** 🔴
+**Verdict: FAKE (AI Generated) — 88.1% confidence** 🔴
 
 ---
 
