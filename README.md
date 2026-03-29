@@ -1,4 +1,3 @@
-# Real-VS-Ai-Image-Detector
 # 🔍 Real VS AI Image Detector
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue?style=flat&logo=python)
@@ -8,10 +7,10 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-orange?style=flat&logo=googlecolab)
 
-> With the rapid advancement of AI image generation technology, 
-> distinguishing real photographs from AI-generated images has become 
-> increasingly challenging — even for trained professionals.
+> With the rapid advancement of AI image generation technology, distinguishing real photographs
+> from AI-generated images has become increasingly challenging — even for trained professionals.
 > This project presents a deep learning solution to automate that detection.
+
 ---
 
 ## 📽️ Demo Video
@@ -21,37 +20,48 @@
 
 ## 🧪 Live Test Results
 
-Two cats. Same breed. Completely different origins. The model got both right.
+Two nature photographs. Both look real. Only one is.
+The model identified each correctly with near-perfect confidence.
 
-### Test 1 — AI Generated Image (Nano Banana Pro)
+### Test 1 — AI Generated Image
+> 📸 Image Source: **Nano Banana Pro** (AI Image Generator)
+
 | Input | Prediction |
 |---|---|
 | ![AI Nature](outputs/ai_nature_input.jpeg) | ![AI Nature Output](outputs/ai_nature_output.png) |
 
-**Verdict: FAKE (AI Generated) — 88.1% confidence** 🔴
+**Verdict: FAKE (AI Generated) — 99.86% confidence** 🔴
 
 ---
 
 ### Test 2 — Real Photograph
+> 📸 Image Source: **Unsplash** — [nathan-ziemanski](https://unsplash.com/@nathanziemanski) (Free to use under Unsplash License)
+
 | Input | Prediction |
 |---|---|
 | ![Real Nature](outputs/real_nature_input.jpg) | ![Real Nature Output](outputs/real_nature_output.png) |
 
-**Verdict: REAL — 95.04% confidence** 🟢
+**Verdict: REAL — 99.37% confidence** 🟢
 
 ---
 
-> Both images look convincingly real to the human eye — but the model confidently identified each one correctly. That's exactly what this project was built to do.
+> The AI-generated image was produced by Nano Banana Pro — one of the most advanced AI image
+> generators available. Despite its photorealistic quality, the model detected it as fake
+> with 99.86% confidence. The real photograph was correctly identified with 99.37% confidence.
+> Both predictions were made on images the model had never seen before.
 
 ---
 
 ## 💡 The Idea Behind This Project
 
-AI image generators have gotten frighteningly good. Tools like Midjourney, DALL-E, and Stable Diffusion can produce images so realistic that even experts struggle to identify them. This is no longer just a tech curiosity — it's a real problem affecting journalism, social media, academic integrity, and digital trust.
+AI image generators have gotten frighteningly good. Tools like Midjourney, DALL-E, and Stable
+Diffusion can produce images so realistic that even experts struggle to identify them. This is
+no longer just a tech curiosity — it is a real problem affecting journalism, social media,
+academic integrity, and digital trust.
 
-I wanted to answer a simple question: **can a deep learning model reliably detect what the human eye cannot?**
-
-The answer, after many failures and one key breakthrough, turned out to be yes.
+The objective of this project is to develop a deep learning model capable of automatically
+determining whether a given image is a real photograph or an AI-generated image — with high
+confidence and across diverse image categories.
 
 ---
 
@@ -66,15 +76,21 @@ The first five attempts all shared the same fatal flaw — the model was learnin
 - Root cause: the model was picking up on surface-level shortcuts like brightness and contrast rather than genuine AI artifacts
 - First dataset used only human faces — the model hit 98% accuracy on faces but completely broke on animals, food, and landscapes
 
-Each failure pointed to the same underlying truth: detecting AI-generated images requires looking at **deep, subtle visual features** — the kind that only emerge at high resolution and across diverse image types.
+Each failure pointed to the same underlying truth: detecting AI-generated images requires
+looking at **deep, subtle visual features** — the kind that only emerge at high resolution
+and across diverse image types.
 
 ### The Breakthrough: Transfer Learning + Better Data
 
 Two decisions changed everything:
 
-**1. Switched to EfficientNetB3** — Pre-trained by Google on 14 million images, this model already understood complex visual patterns. Instead of teaching it everything from scratch, I only needed to teach it one new distinction: Real vs Fake.
+**1. Switched to EfficientNetB3** — Pre-trained by Google on 14 million images, this model
+already understood complex visual patterns. Instead of teaching it everything from scratch,
+the task was reduced to teaching it one new distinction: Real vs Fake.
 
-**2. Switched to MS COCO AI Defactify Dataset** — A diverse, high-resolution dataset covering faces, animals, objects, food, landscapes, and indoor scenes — generated by the most advanced AI tools including Stable Diffusion, DALL-E 3, and Midjourney v6.
+**2. Switched to MS COCO AI Defactify Dataset** — A diverse, high-resolution dataset covering
+faces, animals, objects, food, landscapes, and indoor scenes — generated by the most advanced
+AI tools including Stable Diffusion, DALL-E 3, and Midjourney v6.
 
 These two changes, combined with careful class balancing, produced a model that actually works.
 
@@ -176,7 +192,7 @@ def predict_image(image_path):
 predict_image("your_image.jpg")
 ```
 
-### Using with Google Colab + Drive
+### Using with Google Colab + Google Drive
 ```python
 from google.colab import drive
 drive.mount('/content/drive')
@@ -203,33 +219,40 @@ print("✅ Model loaded from Google Drive!")
 
 ## 💡 Key Lessons Learned
 
-**Dataset quality beats dataset size.** Tiny 32×32 images simply don't carry enough visual information. Resolution matters.
+**Dataset quality beats dataset size.** Tiny 32×32 images simply don't carry enough visual
+information. Resolution matters.
 
-**Your training data defines your model's world.** A model trained only on faces will fail on everything else. The training distribution must match real-world use.
+**Training data must match real-world use.** A model trained only on faces will fail on
+everything else. The training distribution must reflect the intended use case.
 
-**Class imbalance silently destroys models.** A 1:5 imbalance pushed the model to predict Fake for everything. Balancing classes isn't optional — it's fundamental.
+**Class imbalance silently destroys models.** A 1:5 imbalance pushed the model to predict
+Fake for everything. Balancing classes is a fundamental requirement, not an optional step.
 
-**Transfer learning changes the game.** EfficientNetB3 solved in one session what five scratch-built CNNs couldn't solve at all.
+**Transfer learning changes the game.** EfficientNetB3 solved in one session what five
+scratch-built CNNs could not solve at all.
 
-**Failure is data.** Every failed attempt revealed exactly what was wrong. The working model exists because of those failures, not despite them.
+**Failure is data.** Every failed attempt revealed exactly what was wrong. The working model
+exists because of those failures, not despite them.
+
+---
+
+## 🎓 Acknowledgements
+
+This project was developed as the **Final Project** for an AI & Data Science Certificate Course.
+Special thanks to [@veershah-sh](https://github.com/veershah-sh) and the entire teaching team
+for their guidance, support, and for introducing the fundamentals of machine learning and
+deep learning throughout this course.
 
 ---
 
 ## 👨‍💻 Author
 
-**Ashish Bipinbhai Makwana**  
-BCA Student — Sardar Patel University, India  
+**Ashish Bipinbhai Makwana**
+BCA Student — Sardar Patel University, India
 📅 March 2026
 
 ---
-## 🎓 Course & Acknowledgements
 
-This project was developed as the **Final Project** for the 
-**[Artificial Intelligence Certificate Course]** AI & Data Science Certificate Program.
-
-Special thanks to [@veershah-sh](https://github.com/veershah-sh) 
-and the entire teaching team for the guidance throughout this journey.
----
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
