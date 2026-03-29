@@ -221,7 +221,9 @@ BCA Student — Sardar Patel University, India
 📅 March 2026
 
 ---
-
+## 🙏 Acknowledgements
+Special thanks to [@veershah-sh](https://github.com/veershah-sh) for ...
+---
 ## 📄 License
 
 This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
