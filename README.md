@@ -26,7 +26,7 @@ Two cats. Same breed. Completely different origins. The model got both right.
 ### Test 1 — AI Generated Image (Nano Banana Pro)
 | Input | Prediction |
 |---|---|
-| ![AI Cat](outputs/ai_cat_input.jpeg) | ![AI Cat Output](outputs/ai_cat_output.png) |
+| ![AI Nature](outputs/ai_nature_input.jpeg) | ![AI Nature Output](outputs/ai_nature_output.png) |
 
 **Verdict: FAKE (AI Generated) — 88.1% confidence** 🔴
 
@@ -35,7 +35,7 @@ Two cats. Same breed. Completely different origins. The model got both right.
 ### Test 2 — Real Photograph
 | Input | Prediction |
 |---|---|
-| ![Real Cat](outputs/real_cat_input.jpg) | ![Real Cat Output](outputs/real_cat_output.png) |
+| ![Real Nature](outputs/real_nature_input.jpg) | ![Real Nature Output](outputs/real_nature_output.png) |
 
 **Verdict: REAL — 95.04% confidence** 🟢
 
