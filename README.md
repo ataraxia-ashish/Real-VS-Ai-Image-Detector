@@ -25,7 +25,7 @@ Two cats. Same breed. Completely different origins. The model got both right.
 ### Test 1 — AI Generated Image (Nano Banana 2)
 | Input | Prediction |
 |---|---|
-| ![AI Cat](outputs/ai_cat_input.jpg) | ![AI Cat Output](outputs/ai_cat_output.png) |
+| ![AI Cat](outputs/ai_cat_input.jpeg) | ![AI Cat Output](outputs/ai_cat_output.png) |
 
 **Verdict: FAKE (AI Generated) — 88.1% confidence** 🔴
 
