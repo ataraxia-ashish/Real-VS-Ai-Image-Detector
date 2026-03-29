@@ -1,0 +1,68 @@
+# Step 1 — Install and import
+import numpy as np
+import matplotlib.pyplot as plt
+import tensorflow as tf
+from tensorflow.keras.models import load_model
+from tensorflow.keras.applications.efficientnet import preprocess_input
+from PIL import Image
+from google.colab import files
+
+# Step 2 — Upload your saved model
+uploaded = files.upload()  # Upload real_vs_ai_detector_final.keras
+
+# Step 3 — Load model
+model = load_model("MyModel.keras")
+print("✅ Model loaded!")
+
+# Step 4 — Predict on any image
+IMG_SIZE = 224
+
+def predict_image(image_path):
+    img = Image.open(image_path).convert('RGB')
+    img = img.resize((IMG_SIZE, IMG_SIZE))
+    img = np.array(img, dtype=np.float32)
+    img = preprocess_input(img)
+    img_input = np.expand_dims(img, axis=0)
+
+    pred_prob = model.predict(img_input, verbose=0)[0][0]
+    pred_label = "REAL" if pred_prob > 0.5 else "FAKE (AI Generated)"
+    confidence = pred_prob if pred_prob > 0.5 else 1 - pred_prob
+
+    # Display
+    original = Image.open(image_path).convert("RGB")
+    fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+    fig.suptitle("Real vs AI Image Detector", fontsize=15, fontweight="bold")
+    axes[0].imshow(original)
+    axes[0].axis("off")
+    axes[0].set_title("Uploaded Image", fontsize=12)
+
+    categories = ["FAKE (AI)", "REAL"]
+    values = [1 - pred_prob, pred_prob]
+    bar_colors = ["red", "green"]
+    bars = axes[1].barh(categories, values, color=bar_colors, edgecolor="black")
+    axes[1].set_xlim(0, 1)
+    axes[1].set_xlabel("Confidence Score", fontsize=12)
+    axes[1].set_title("Prediction Confidence", fontsize=12)
+    axes[1].axvline(x=0.5, color="black", linestyle="--", alpha=0.5)
+
+    for bar, val in zip(bars, values):
+        axes[1].text(
+            val + 0.01, bar.get_y() + bar.get_height()/2,
+            f"{val*100:.1f}%",
+            va="center", fontsize=12, fontweight="bold"
+        )
+
+    plt.tight_layout()
+    plt.show()
+
+    print("\n" + "=" * 40)
+    print(f"VERDICT      : {pred_label}")
+    print(f"CONFIDENCE   : {confidence*100:.2f}%")
+    print(f"AI Prob      : {(1-pred_prob)*100:.2f}%")
+    print(f"Real Prob    : {pred_prob*100:.2f}%")
+    print("=" * 40)
+
+# Step 5 — Upload and test any image!
+uploaded_img = files.upload()
+for filename in uploaded_img.keys():
+    predict_image(filename)
