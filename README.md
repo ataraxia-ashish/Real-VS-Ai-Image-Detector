@@ -14,8 +14,7 @@
 ---
 
 ## 📽️ Demo Video
-> 🎬 **Demo video coming soon — currently being edited!**
-
+[![Demo Video](outputs/ai_nature_input.jpeg)](https://www.linkedin.com/posts/ashish-makwana-a6255a39b_machinelearning-deeplearning-ai-activity-7444327980782317568-XBlz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGIlymoBatqhpKl_quzpEKwH2i0fa8Y05wM)
 ---
 
 ## 🧪 Live Test Results
