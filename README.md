@@ -14,7 +14,7 @@
 ---
 
 ## 📽️ Demo Video
-[![Demo Video]](https://www.linkedin.com/posts/ashish-makwana-a6255a39b_machinelearning-deeplearning-ai-activity-7444327980782317568-XBlz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGIlymoBatqhpKl_quzpEKwH2i0fa8Y05wM)
+[![Demo Video](https://img.shields.io/badge/Watch%20Demo-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/posts/ashish-makwana-a6255a39b_machinelearning-deeplearning-ai-activity-7444327980782317568-XBlz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGIlymoBatqhpKl_quzpEKwH2i0fa8Y05wM)
 ---
 
 ## 🧪 Live Test Results
