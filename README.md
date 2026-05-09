@@ -6,15 +6,30 @@
 ![F1 Score](https://img.shields.io/badge/F1%20Score-0.84-brightgreen?style=flat)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-orange?style=flat&logo=googlecolab)
+[![Live Demo](https://img.shields.io/badge/🤗%20Live%20Demo-Hugging%20Face-orange?style=flat)](https://huggingface.co/spaces/ataraxia-ashish/real-vs-ai-detector)
 
-> With the rapid advancement of AI image generation technology, distinguishing real photographs
-> from AI-generated images has become increasingly challenging — even for trained professionals.
-> This project presents a deep learning solution to automate that detection.
+> **AI-generated images are everywhere. Most people can't tell the difference. This model can.**
+> Upload any image — get a verdict with confidence score in seconds. No setup. No expertise required.
 
 ---
 
 ## 📽️ Demo Video
 [![Demo Video](https://img.shields.io/badge/Watch%20Demo-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/posts/ashish-makwana-a6255a39b_machinelearning-deeplearning-ai-activity-7444327980782317568-XBlz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGIlymoBatqhpKl_quzpEKwH2i0fa8Y05wM)
+
+---
+
+## 🎯 Who Is This For?
+
+This tool is built for anyone who needs to verify image authenticity — fast.
+
+| Use Case | How It Helps |
+|---|---|
+| **Media & Journalism** | Verify whether a viral image is real before publishing |
+| **HR & Recruiters** | Detect AI-generated profile photos in job applications |
+| **Social Media Platforms** | Flag potentially synthetic content at scale via API |
+| **Academic Institutions** | Identify AI-generated images submitted as original work |
+| **Developers & Startups** | Integrate image authenticity detection into any product via API |
+
 ---
 
 ## 🧪 Live Test Results
@@ -249,6 +264,19 @@ deep learning throughout this course.
 **Ashish Bipinbhai Makwana**
 BCA Student — Sardar Patel University, India
 📅 March 2026
+
+---
+
+## 📬 Contact
+
+Have a project in mind, a collaboration idea, or just want to connect?
+
+| Platform | Link |
+|---|---|
+| 📧 Email | [ashmakwana29@gmail.com](mailto:ashmakwana29@gmail.com) |
+| 💼 LinkedIn | [Ashish Makwana](https://www.linkedin.com/in/ashish-makwana-a6255a39b/) |
+| 🐙 GitHub | [ataraxia-ashish](https://github.com/ataraxia-ashish) |
+| 📸 Instagram | [@ataraxia_ashish](https://www.instagram.com/ataraxia_ashish) |
 
 ---
 
