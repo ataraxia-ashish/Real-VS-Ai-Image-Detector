@@ -6,7 +6,6 @@
 ![F1 Score](https://img.shields.io/badge/F1%20Score-0.84-brightgreen?style=flat)
 ![License](https://img.shields.io/badge/License-MIT-yellow?style=flat)
 ![Platform](https://img.shields.io/badge/Platform-Google%20Colab-orange?style=flat&logo=googlecolab)
-[![Live Demo](https://img.shields.io/badge/🤗%20Live%20Demo-Hugging%20Face-orange?style=flat)](https://huggingface.co/spaces/ataraxia-ashish/real-vs-ai-detector)
 
 > **AI-generated images are everywhere. Most people can't tell the difference. This model can.**
 > Upload any image — get a verdict with confidence score in seconds. No setup. No expertise required.
@@ -16,6 +15,12 @@
 ## 📽️ Demo Video
 [![Demo Video](https://img.shields.io/badge/Watch%20Demo-LinkedIn-blue?logo=linkedin)](https://www.linkedin.com/posts/ashish-makwana-a6255a39b_machinelearning-deeplearning-ai-activity-7444327980782317568-XBlz?utm_source=share&utm_medium=member_desktop&rcm=ACoAAGIlymoBatqhpKl_quzpEKwH2i0fa8Y05wM)
 
+---
+## 🚀 Try It Now
+
+No setup. No installation. Just upload an image and get the verdict instantly.
+
+[![Try It Now](https://img.shields.io/badge/🤗%20Try%20It%20Now-Hugging%20Face-orange?style=for-the-badge)](https://huggingface.co/spaces/ataraxia-ashish/real-vs-ai-detector)
 ---
 
 ## 🎯 Who Is This For?
